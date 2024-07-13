@@ -1,5 +1,4 @@
 "use client";
-import { User } from "next-auth";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,12 +7,13 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/DropdownMenu";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import Image from "next/image";
-import { AvatarProps } from "@radix-ui/react-avatar";
-import Link from "next/link";
-import { signOut } from "next-auth/react";
 import { buttonVariants } from "@/components/ui/button";
-import { User as LUser }  from "lucide-react";
+import { AvatarProps } from "@radix-ui/react-avatar";
+import { User as LUser } from "lucide-react";
+import { User } from "next-auth";
+import { signOut } from "next-auth/react";
+import Image from "next/image";
+import Link from "next/link";
 
 interface ProfileImageProps {
   user: Pick<User, "name" | "image" | "email">;
@@ -32,12 +32,12 @@ export default function ProfileImage({ user }: ProfileImageProps) {
         />
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent className="bg-white" align="end">
+      <DropdownMenuContent className="" align="end">
         <div className="flex items-center justify-start gap-2 p-2">
           <div className="flex flex-col space-y-1 leading-none">
             {user.name && <p className="font-medium">{user.name}</p>}
             {user.email && (
-              <p className="w-[200px] truncate text-sm text-zinc-700">
+              <p className="w-[200px] truncate text-sm text-cyan-500">
                 {user.email}
               </p>
             )}
@@ -46,15 +46,15 @@ export default function ProfileImage({ user }: ProfileImageProps) {
         <DropdownMenuSeparator />
 
         <DropdownMenuItem asChild>
-          <Link href="/">Feed</Link>
+          <Link href="/">Home</Link>
         </DropdownMenuItem>
 
         <DropdownMenuItem asChild>
-          <Link href="/r/create">Create</Link>
+          <Link href="/dashboard">Dashboard</Link>
         </DropdownMenuItem>
 
         <DropdownMenuItem asChild>
-          <Link href="/settings">Settings</Link>
+          <Link href="/upload">Upload File</Link>
         </DropdownMenuItem>
 
         <DropdownMenuSeparator />
