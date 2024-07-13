@@ -10,6 +10,9 @@ const config = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        'custom-dark': '0 10px 15px -3px rgba(38, 89, 115, 0.5), 0 4px 6px -2px rgba(38, 89, 115, 0.5)',
+      },
       fontFamily: {
         heading: ['var(--font-heading)', ...fontFamily.sans],
         body: ['var(--font-body)', ...fontFamily.mono]

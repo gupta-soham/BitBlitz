@@ -5,12 +5,12 @@ import { Button } from "../ui/button";
 
 export default function Content() {
   return (
-    <main className="flex-1">
+    <main className="flex-1 mx-auto shadow-custom-dark border border-slate-900">
       <section className="bg-background md:py-32 p-10">
         <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Get to know your Vulnerablities
+              Get to know your Vulnerabilities
             </h1>
             <p className="text-muted-foreground text-lg">
               Our cutting-edge framework empowers you to navigate the
@@ -73,7 +73,7 @@ export default function Content() {
           </div>
           <div className="space-y-6 order-1 md:order-2">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Get to know your Vulnerablities
+              Get to know your Vulnerabilities
             </h2>
             <p className="text-muted-foreground text-lg">
               Our cutting-edge framework empowers you to navigate the
