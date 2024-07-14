@@ -62,7 +62,7 @@ export default function FileUploadClient({ userId }: FileUploadClientProps) {
           </ToastAction>
         ),
       });
-      router.push(`/analyze?fileId=${result.fileId}`);
+      // router.push(`/analyze?fileId=${result.fileId}`);
     } catch (error) {
       console.error("Upload error:", error);
       toast({
