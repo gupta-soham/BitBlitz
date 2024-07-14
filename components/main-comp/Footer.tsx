@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-background border-t">
         <div className="container flex items-center justify-between h-16 px-4 md:px-6">
           <p className="text-muted-foreground text-sm flex items-center justify-center">
-            &copy; 2024 Volatility. All rights reserved.
+            &copy; 2024 bitSafe. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <Link

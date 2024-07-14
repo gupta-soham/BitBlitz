@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 import { Navbar } from "@/components/main-comp/Navbar";
 import { Toaster } from "@/components/ui/toaster";
+import Footer from "@/components/main-comp/Footer";
 
 const fontHeading = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -41,6 +42,8 @@ export default function RootLayout({
 
         {children}
 
+        <Footer />
+        
         <Toaster />
       </body>
     </html>

@@ -13,17 +13,13 @@
 
 import { getAuthSession } from "@/lib/auth";
 import Content from "./Content";
-import Footer from "./Footer";
 
 export async function HomePage() {
   const session = await getAuthSession();
 
   return (
     <div className="flex flex-col min-h-screen">
-
       <Content />
-
-      <Footer />
     </div>
   );
 }
