@@ -2,9 +2,12 @@ import { Bricolage_Grotesque } from "next/font/google";
 import { Space_Mono } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "./globals.css";
-import { Navbar } from "@/components/main-comp/Navbar";
 import { Toaster } from "@/components/ui/toaster";
+<<<<<<< HEAD
 import Footer from "@/components/main-comp/Footer";
+=======
+import { Navbar } from "@/components/main-comp/Navbar";
+>>>>>>> 25d79a3 (Dashboard changes)
 
 const fontHeading = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -27,9 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn(
-        "bg-slate-900 text-slate-100 antialiased dark",
-      )}
+      className={cn("bg-slate-900 text-slate-100 antialiased dark")}
     >
       <body
         className={cn(
@@ -39,7 +40,6 @@ export default function RootLayout({
         )}
       >
         <Navbar />
-
         {children}
 
         <Footer />
