@@ -21,8 +21,6 @@ export async function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* <Navbar /> */}
-
       <Content />
     </div>
   );

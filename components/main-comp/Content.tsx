@@ -1,7 +1,8 @@
-import { Bolt, Gauge, ShieldCheck } from "lucide-react";
+import { Bolt, Gauge, ShieldCheck, Github } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 export default function Content() {
   return (
@@ -13,17 +14,21 @@ export default function Content() {
               Get to know your Vulnerabilities
             </h1>
             <p className="text-muted-foreground text-lg">
-              Our cutting-edge framework empowers you to navigate the
-              ever-changing financial landscape with precision and confidence.
+              Perform, Store, and Securely manage Historical analysis Data
+              through this web application.
             </p>
             <div className="flex gap-4">
-              <Button>Get Started</Button>
-              <Button variant="outline">Learn More</Button>
+              <Link href="/dashboard">
+                <Button>Get Started</Button>
+              </Link>
+              <Link href="#learn-more">
+                <Button variant="outline">Learn More</Button>
+              </Link>
             </div>
           </div>
           <div className="hidden md:block">
             <Image
-              src="/placeholder.svg"
+              src={"/file.png"}
               width={600}
               height={400}
               alt="Volatility Framework"
@@ -38,33 +43,33 @@ export default function Content() {
             <Gauge className="w-8 h-8 text-primary" />
             <h3 className="text-2xl font-bold">Advanced Analytics</h3>
             <p className="text-muted-foreground">
-              Gain deep insights into market trends and volatility patterns with
-              our powerful analytics tools.
+              Our web application provides with deeper analysis of the memory
+              dump files and provides insights on analyzed data.
             </p>
           </div>
           <div className="space-y-4">
             <Bolt className="w-8 h-8 text-primary" />
-            <h3 className="text-2xl font-bold">Rapid Deployment</h3>
+            <h3 className="text-2xl font-bold">Secure</h3>
             <p className="text-muted-foreground">
-              Quickly integrate our framework into your existing systems and
-              start leveraging its capabilities.
+              Your data is not stored with us. It is only utilised while being
+              processed for the scanning.
             </p>
           </div>
           <div className="space-y-4">
             <ShieldCheck className="w-8 h-8 text-primary" />
-            <h3 className="text-2xl font-bold">Robust Security</h3>
+            <h3 className="text-2xl font-bold">Historical Analysis</h3>
             <p className="text-muted-foreground">
-              Trust our secure and reliable platform to protect your data and
-              ensure compliance.
+              You can access the analyses of previous scans and their respective
+              results easily from your dashboard along with other features.
             </p>
           </div>
         </div>
       </section>
-      <section className="bg-background py-16 md:py-24 p-10">
+      <section className="bg-background py-16 md:py-24 p-10" id="learn-more">
         <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="order-2 md:order-1">
             <Image
-              src="/placeholder.svg"
+              src="/volatality.png"
               width={600}
               height={400}
               alt="Volatility Framework"
@@ -73,46 +78,37 @@ export default function Content() {
           </div>
           <div className="space-y-6 order-1 md:order-2">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Get to know your Vulnerabilities
+              Based on{" "}
+              <span className="bg-gradient-to-r from-red-500 text-black">
+                &nbsp;Volatility 3&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+              </span>
             </h2>
             <p className="text-muted-foreground text-lg">
-              Our cutting-edge framework empowers you to navigate the
-              ever-changing financial landscape with precision and confidence.
+              The Volatility Framework is an advanced open-source memory
+              forensics tool used to analyze RAM dumps and investigate malicious
+              activity across Windows, Linux, and macOS. It provides plugins to
+              extract digital artifacts from memory, aiding in processes,
+              network connections, and registry analysis. Widely used in
+              cybersecurity, it's essential for incident response and malware
+              analysis.
             </p>
-            <div className="flex gap-4">
-              <Button>Get Started</Button>
-              <Button variant="outline">Learn More</Button>
+            <div className="flex gap-4 pt-10">
+              <Link
+                href="https://github.com/volatilityfoundation/volatility3"
+                className="flex flex-row"
+                target="_blank"
+              >
+                <Button variant="outline" className="p-10">
+                  <Github className="w-10 h-10" />
+                  <p className="text-white pl-5 text-3xl hover:text-black">
+                    Github
+                  </p>
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
-      </section>
-      <section className="bg-muted py-16 md:py-24 p-10">
-        <div className="container grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="space-y-4">
-            <Gauge className="w-8 h-8 text-primary" />
-            <h3 className="text-2xl font-bold">Advanced Analytics</h3>
-            <p className="text-muted-foreground">
-              Gain deep insights into market trends and volatility patterns with
-              our powerful analytics tools.
-            </p>
-          </div>
-          <div className="space-y-4">
-            <Bolt className="w-8 h-8 text-primary" />
-            <h3 className="text-2xl font-bold">Rapid Deployment</h3>
-            <p className="text-muted-foreground">
-              Quickly integrate our framework into your existing systems and
-              start leveraging its capabilities.
-            </p>
-          </div>
-          <div className="space-y-4">
-            <ShieldCheck className="w-8 h-8 text-primary" />
-            <h3 className="text-2xl font-bold">Robust Security</h3>
-            <p className="text-muted-foreground">
-              Trust our secure and reliable platform to protect your data and
-              ensure compliance.
-            </p>
-          </div>
-        </div>
+        <div className="h-20"></div>
       </section>
     </main>
   );

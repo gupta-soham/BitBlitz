@@ -16,36 +16,18 @@ import {
   ChartLegendContent,
 } from "@/components/ui/chart";
 const chartData = [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
-  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-  { browser: "other", visitors: 90, fill: "var(--color-other)" },
+  { scans: "Total Scans", count: 275, fill: "var(--color-total_scans)" },
+  { scans: "Malicious", count: 200, fill: "var(--color-malicious)" },
 ];
 
 const chartConfig = {
-  visitors: {
-    label: "Visitors",
-  },
-  chrome: {
-    label: "Chrome",
+  total_scans: {
+    label: "Total Scans",
     color: "hsl(var(--accent))",
   },
-  safari: {
-    label: "Safari",
+  malicious: {
+    label: "Malicious",
     color: "hsl(var(--foreground))",
-  },
-  firefox: {
-    label: "Firefox",
-    color: "hsl(var(--primary))",
-  },
-  edge: {
-    label: "Edge",
-    color: "hsl(var(--popover))",
-  },
-  other: {
-    label: "Other",
-    color: "hsl(var(--destructive))",
   },
 } satisfies ChartConfig;
 
@@ -53,7 +35,7 @@ export default function Component() {
   return (
     <Card className="flex flex-col bg-bar-graph">
       <CardHeader className="items-center pb-0">
-        <CardTitle>Pie Chart - Legend</CardTitle>
+        <CardTitle>Total Scans Vs Total Malware Detected</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
@@ -62,9 +44,9 @@ export default function Component() {
           className="mx-auto aspect-square max-h-[750px]"
         >
           <PieChart>
-            <Pie data={chartData} dataKey="visitors" />
+            <Pie data={chartData} dataKey="count" />
             <ChartLegend
-              content={<ChartLegendContent nameKey="browser" />}
+              content={<ChartLegendContent nameKey="scans" />}
               className="-translate-y-2 flex-wrap gap-2 [&>*]:basis-1/4 [&>*]:justify-center"
             />
           </PieChart>
