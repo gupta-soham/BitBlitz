@@ -50,10 +50,16 @@ export default function SideNav() {
                 <span className="hover:text-accent">Historical Analytics</span>
               </Link>
               <Link
-                href="/dashboard/mal_detection"
+                href="/dashboard/mal_detected"
                 className="mb-2 flex items-end justify-start p-4"
               >
-                <span className="hover:text-accent">Malware Detection</span>
+                <span className="hover:text-accent">Malware Detected</span>
+              </Link>
+              <Link
+                href="/dashboard/res_usage"
+                className="mb-2 flex items-end justify-start p-4"
+              >
+                <span className="hover:text-accent">Resource Usage</span>
               </Link>
             </form>
           </div>
